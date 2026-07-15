@@ -1,23 +1,23 @@
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 
-function Navbar(){
-    return(
-        <>
-            <nav className="flex bg-green">
-                <div className="logo">
-                    <Link to="/"> DEVHORIZON_26</Link>
-                </div>
+export default function Navbar() {
+  return (
+    <nav className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-4">
+        <Link to="/" className="font-display text-base font-bold tracking-wide text-text">
+          DEVHORIZON_26
+        </Link>
 
-                <div className="nav-items">
-                    <Link to="/home">HOME</Link>
-                    <Link to="/schedule">SCHEDULE</Link>
-                    <Link to="/speaker">SPEAKERS</Link>
-                </div> 
-                 {/* <!----- MENU TOGGLE ------->  */}
-                <div className="menu-toggle">&#9776;</div>
-            </nav> 
-        </>
-    )
+        <div className="hidden items-center gap-9 font-utility text-sm tracking-wide md:flex">
+          <Link to="/" className="text-text-dim transition-colors hover:text-accent">HOME</Link>
+          <Link to="/schedule" className="text-text-dim transition-colors hover:text-accent">SCHEDULE</Link>
+          <Link to="/speakers" className="text-text-dim transition-colors hover:text-accent">SPEAKERS</Link>
+        </div>
+
+        <button className="text-3xl text-text md:hidden" aria-label="Open menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  );
 }
-
-export default Navbar;

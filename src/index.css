@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d10;
+  --color-surface: #14171c;
+  --color-surface-2: #1b1f26;
+  --color-line: #262b31;
+  --color-text: #edeff2;
+  --color-text-dim: #8a9099;
+  --color-comment: #6fae83;
+  --color-accent: #e8a33d;
+  --color-accent-2: #8b96f5;
+  --color-pink: #e0708f;
+  --color-sky: #5db8db;
+
+  --font-display: "JetBrains Mono", "Courier New", monospace;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-utility: "IBM Plex Mono", "Courier New", monospace;
+
+  --animate-blink: blink 1.1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-body antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display font-normal leading-[1.05] tracking-tight m-0;
+  }
+  p {
+    @apply m-0 leading-relaxed;
+  }
+  a {
+    @apply text-inherit no-underline;
+  }
+  button {
+    @apply font-utility;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-accent outline-offset-[3px];
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+} 
