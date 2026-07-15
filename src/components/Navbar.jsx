@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-4">
-        <Link to="/" className="font-display text-base font-bold tracking-wide text-text">
+        <Link to="/" className="font-display text-base font-bold tracking-wide text-[#D1FB77]">
           DEVHORIZON_26
         </Link>
 

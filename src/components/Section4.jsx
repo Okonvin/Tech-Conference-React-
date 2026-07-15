@@ -69,10 +69,16 @@
 
                             <div className="my-4 h-px bg-line"></div>
 
-                            <p className="text-[0.78rem] uppercase text-text-dim">{speaker.talk}</p>
+                            <p className="text-[0.78rem] uppercase text-[#C4FB6B]">{speaker.talk}</p>
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="mt-14 flex justify-center">
+                <button className="rounded-sm border border-accent px-8 py-3.5 font-utility text-sm tracking-wide text-accent shadow-[0_0_20px_rgba(232,163,61,0.15)] transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-[#14100a] hover:shadow-[0_10px_28px_rgba(232,163,61,0.3)]">
+                    VIEW ALL SPEAKERS
+                </button>
             </div>
         </section>
     )
